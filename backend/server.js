@@ -15,7 +15,19 @@ app.get("/", (req, res) => {
   res.send("Hello there?");
 });
 // Define the search parameters
-    // "https://api.kelkoogroup.net/publisher/shopping/v2/feeds/pla?country=ae",
+const searchParams = {
+  keyword: 'laptop',
+  sort: 'price_asc',
+  limit: 10
+};
+app.get("/api/search", async (req, res) => {
+  const query = req.query.q;
+
+  try {
+    await axios
+      .get(
+        "https://api.kelkoogroup.net/publisher/shopping/v2/search/offers/6466675ff7e14f827893929e9c55dcbd?country=ae&fieldsAlias=minimal&facetValues=2",
+        // "https://api.kelkoogroup.net/publisher/shopping/v2/feeds/pla?country=ae",
         // "https://api.kelkoogroup.net/publisher/shopping/v2/search/offers?country=ae&query=lenovo",
         // "https://api.kelkoogroup.net/publisher/shopping/v3/search/offers",
         // "https://api.kelkoogroup.net/publisher/shopping/v2/search/feeds/merchants?country=ae/100512102",
