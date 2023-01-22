@@ -32,7 +32,14 @@ app.get("/api/search", async (req, res) => {
         // "https://api.kelkoogroup.net/publisher/shopping/v3/search/offers",
         // "https://api.kelkoogroup.net/publisher/shopping/v2/search/feeds/merchants?country=ae/100512102",
         // "https://shopping-api.kelkoo.com/v3/products",
-
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "http://localhost:3000",
+            "Access-Control-Allow-Methods" : "GET, POST, OPTIONS",
+            "Accept-Encoding": "gzip",
+             "Content-type": "Application/json",
+            Authorization: `Bearer ${token}`,
+          },
           // params: searchParams
         }
       ) 
