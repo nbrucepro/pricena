@@ -41,14 +41,7 @@ app.get("/api/search", async (req, res) => {
             Authorization: `Bearer ${token}`,
           },
           // params: searchParams
-        }
-      ) 
-      .then(
-        (response) => {
-          var response = response.data;
-          res.json(response);
-        },
-        (error) => {
+   
           // var status = err or.response.status;
           console.log(error);
         }
