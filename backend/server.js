@@ -50,16 +50,4 @@ app.get("/api/search", async (req, res) => {
         },
         (error) => {
           // var status = err or.response.status;
-          console.log(error);
-        }
-      );
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server Error");
-  }
-}); 
-
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+                  
