@@ -175,3 +175,7 @@ const ProductDetails = ({ product }) => {
 };
 
 export default ProductDetails;
+
+
+
+// v16.17.1
