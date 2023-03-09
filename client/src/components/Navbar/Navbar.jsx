@@ -6,9 +6,20 @@ import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, Avatar } from '@ma
 import MenuIcon from '@material-ui/icons/Menu';
 import LanguageIcon from '@material-ui/icons/Language';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  appBar: {
+    boxShadow: 'none',
+  },
+}));
+
 
 function Navbar() {
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -19,11 +30,11 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" color="inherit">
+    <AppBar position="static" color="inherit" className={classes.appBar}>
       <Toolbar>
         <img src='../../assets/logo.png' alt="Logo" style={{ height: '64px', width: '192px' }} />
         <SearchBar />
-        <div style={{ flexGrow: 1 }} />
+        <div style={{ flexGrow: 1 }} /> 
         <div style={{ display: 'flex' }}>
           <Button color="primary" onClick={handleMenuOpen} startIcon={<LanguageIcon />}>
             عربي
@@ -47,7 +58,7 @@ function Navbar() {
           <MenuIcon />
         </IconButton>
       </Toolbar>
-      <HorizontalList />
+      {/* <HorizontalList /> */}
       <div style={{ display: 'none' }}>
         <div>
           <Button href="#" color="inherit"></Button>
