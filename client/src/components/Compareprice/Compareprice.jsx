@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 // import FormGroup from '@mui/material/FormGroup';
 import axios from "axios";
+import Loader from "../Loader";
 // import './Compareprice.css'
 
 const useStyles = makeStyles((theme) => ({
@@ -226,6 +227,11 @@ const arr1 = [];
           </FormGroup> 
         </Grid>
       </Grid>
+      {1?(
+        <Loader/>
+      ):(
+        <p>nothing</p> 
+      )}
     </Paper>
   );
 };
