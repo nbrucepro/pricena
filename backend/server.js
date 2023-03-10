@@ -21,6 +21,7 @@ app.get("/api/search", async (req, res) => {
     await axios
       .get(
         "https://api.kelkoogroup.net/publisher/shopping/v2/search/offers?country=ae&fieldsAlias=minimal&facetValues=2",
+        // "https://api.kelkoogroup.net/publisher/shopping/v2/feeds/pla?country=ae",
         // "https://api.kelkoogroup.net/publisher/shopping/v2/search/offers?country=ae&query=Microsoft Surface Pro&fieldsAlias=minimal&facetValues=10",
         {
           headers: {

@@ -39,17 +39,18 @@ function Navbar() {
           <Button color="primary" onClick={handleMenuOpen} startIcon={<LanguageIcon />}>
             عربي
           </Button>
-          <CountryDropdown />
+          {/* <CountryDropdown /> */}
           <IconButton color="primary" onClick={handleMenuOpen}>
             <AccountCircleIcon />
           </IconButton>
           <Menu
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleMenuClose}
+            // anchorEl={anchorEl}
+            // keepMounted
+            // open={Boolean(anchorEl)}
+            // onClose={handleMenuClose}
           >
-            <MenuItem onClick={handleMenuClose}>
+            <MenuItem>
+            {/* <MenuItem onClick={handleMenuClose}> */}
               Log in / Sign Up
             </MenuItem>
           </Menu>

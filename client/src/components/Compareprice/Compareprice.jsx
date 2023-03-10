@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   FormGroup,
@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 // import FormGroup from '@mui/material/FormGroup';
 import axios from "axios";
+// import './Compareprice.css'
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -33,8 +34,18 @@ const useStyles = makeStyles((theme) => ({
   label: {
     fontWeight: "bold",
     marginRight: 460,
-    color: "#4c4c4c",
+    color: "blue",
+    // color: "#4c4c4c",
+    width:"35%",
+    marginBottom:8
+    // display:'inline-block'  
+    
   },
+  spana:{   
+    color: "grey",
+    marginLeft:9,
+    fontSize:12
+  }, 
   value: {
     color: "#666666",
     marginRight: 300,
@@ -65,6 +76,7 @@ const ProductDetails = ({ product }) => {
   const [size, setSize] = React.useState("");
   const [color, setColor] = React.useState("");
   const [quantity, setQuantity] = React.useState("");
+  const [pname,setpname] = useState('AED 2599');
 
   const handleSizeChange = (event) => {
     setSize(event.target.value);
@@ -72,13 +84,30 @@ const ProductDetails = ({ product }) => {
 
   const handleColorChange = (event) => {
     setColor(event.target.value);
+    if(color){
+      if(color=='blue'){
+        setpname('AED 3747.96')
+      }
+      if(color=='grey'){
+        setpname('AED 3118.77')
+      }
+      if(color=='black'){
+        setpname('AED 1899')
+      }
+      if(color=='green'){
+        setpname('AED 3038.99')
+      }
+      if(color=='sliver'){
+        setpname('AED 3220')
+      }
+    }
   };
 
   const handleQuantityChange = (event) => {
     setQuantity(event.target.value);
   };
   const classes = useStyles();
-
+  const [prod,setprod]= useState([]); 
   useEffect(() => {
     const token =
       "eyJraWQiOiIwMWU5MGEwOS1kZmZkLTRjNzItOGQ2ZC01ODNkOWFiOWM1NGEiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJwbXdzLWFwcGxpY2F0aW9uLWlkOjU3MjMiLCJhenAiOiJQdWJsaXNoZXJzIiwicm9sZXMiOlsiU2hvcHBpbmdBUEkiLCJSZXBvcnRpbmdBUEkiXSwiaXNzIjoiS2Vsa29vIEdyb3VwIiwiaWF0IjoxNjc4MTk2NTU5LCJqdGkiOiJiN2NlMTdlZS02OTkxLTQ3ODAtYjk1Mi1iNmY5YzZkMGQ1MjgifQ.o7ryCysrXvXH-McO_haMYYvUJuxyj06TeiOaBg19ixKyp7eulxmSnlIPCUtedHP3wPMetmSi05rGJHpwXICMA8QAHqngTtKN5U4vk3Ylo0NaZ-UtGp86YEMFHUAzcw2Bkmgax4bwe2FwXQlaZB2ywzVPVjVEPf4k-qNFCtGVB6UsM65X-vh1EHHBtqgER8WhqixWVdw44VOLlPHD9g6sfGjBzHEaDXurD3vePoyssFNcfpbeV4DtrkYJXWBYJFvU6UjcxVpn9ZyXGPBYj59gGLpet59bJpXxfvZwivFPmVdjNpPNEpBLJUSbmOhD_hCxP4qw4GqVIzG4O9jJv310imfYXI6-9wY9Scwviox31mIyh79v2WoTBuOYOKgauhPXh1XMQtlG6XOuFbdE2TV3-K9-gDxC7WzV2xlleXREVUGwRYMdFRYv9HCKt0xZOzfQuYHL2d0nuUtSFRwAis6IHze-wA4i9O9ISxFw-82i1f1tnMJlq91i_9UElHbl44rlUi8YWklhTm9W9nhhwBnhxrIbwspUqaKzUq1JXfv-xGp9vE7DzpdPnK3cWWx-M6tOHw23BSDnDHFilh3UpFgW91r7tRIfxmHHR5E5T6TwY-fyMZzvsstxclSmfJc1pvMNB7Sy2zBihhNAKcXp-RYygCkTrEwssuXrBybZja-egwY";
@@ -98,8 +127,17 @@ const ProductDetails = ({ product }) => {
         )
         .then(
           (response) => {
-            var response = response?.data;
-            console.log(response);
+            var response1 = response?.data?.offers;
+            const response2 = response?.data
+            // console.log(response);
+            const ln= response1.length; 
+            // console.log(ln)
+            for(let i = 0; i < ln ; i++){
+              console.log(response1[i])
+              // console.log(response1[i].title.split(" "))
+            }
+            // setprod(responsa);
+
           },
           (error) => {
             var status = error?.response?.status;
@@ -111,6 +149,8 @@ const ProductDetails = ({ product }) => {
       console.log("Server Error");
     }
   }, []);
+// console.log(prod?prod:"nothing to show")
+const arr1 = [];
 
   return (
     <Paper className={classes.card}>
@@ -127,7 +167,9 @@ const ProductDetails = ({ product }) => {
           <Typography variant="h5" component="h2" className={classes.header}>
             Lenovo
           </Typography>
-          <Typography className={classes.label}>AED 2599</Typography>
+          <Typography className={classes.label}>{pname}
+          <span className={classes.spana}>From Amazon</span>         
+          </Typography>
           <Typography className={classes.value}>
             Lenovo Ideapad 1 i5-SHD Laptop
           </Typography>
@@ -154,9 +196,11 @@ const ProductDetails = ({ product }) => {
                 value={color}
                 onChange={handleColorChange}
               >
-                <MenuItem value="red">Red</MenuItem>
                 <MenuItem value="blue">Blue</MenuItem>
+                <MenuItem value="grey">Grey</MenuItem>
+                <MenuItem value="black">Black</MenuItem>
                 <MenuItem value="green">Green</MenuItem>
+                <MenuItem value="sliver">Sliver</MenuItem>
               </Select>
             </FormControl>
             <FormControl className={classes.formControla}>
@@ -179,7 +223,7 @@ const ProductDetails = ({ product }) => {
                 <MenuItem value="5">5</MenuItem>
               </Select>
             </FormControl>
-          </FormGroup>
+          </FormGroup> 
         </Grid>
       </Grid>
     </Paper>
