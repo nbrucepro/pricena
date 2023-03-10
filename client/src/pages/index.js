@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 
 import Navbar from "../components/Navbar/Navbar";
 import ProductDetails from "../components/Compareprice/Compareprice";
+import Footer from '@/components/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,7 +13,8 @@ export default function Home() {
   return (
     <main>
 <Navbar/>  
-<ProductDetails/>    
+<ProductDetails/>   
+<Footer/> 
     </main>
   )
 }
