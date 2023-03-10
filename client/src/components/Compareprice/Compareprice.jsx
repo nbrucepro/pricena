@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 10,
     marginTop: 20,
     width: "70rem",
-    marginBottom: "7rem",
+    height: "30rem",
     marginLeft: "12rem",
   },
   breaka: {

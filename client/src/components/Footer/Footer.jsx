@@ -7,10 +7,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff",
     color: "#333",
     padding: theme.spacing(4),
-    position: "fixed",
+    position: "relative",
     bottom: 0,
-    width: "100%",
-    marginTop:20 
+    width: "95%",
+    marginTop:"20rem" 
   },
   link: {
     fontSize: "1.1rem",
