@@ -18,18 +18,15 @@ const useStyles = makeStyles((theme) => ({
 function Navbar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-
-
-
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
+  
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
-
-  return (
+  
+  return ( 
     <AppBar position="static" color="inherit" className={classes.appBar}>
       <Toolbar>
         <img src='../../assets/logo.png' alt="Logo" style={{ height: '64px', width: '192px' }} />
@@ -48,10 +45,11 @@ function Navbar() {
             // keepMounted
             // open={Boolean(anchorEl)}
             // onClose={handleMenuClose}
+          // this is footr 
           >
             <MenuItem>
             {/* <MenuItem onClick={handleMenuClose}> */}
-              Log in / Sign Up
+              Log in / Sign Up 
             </MenuItem>
           </Menu>
         </div>

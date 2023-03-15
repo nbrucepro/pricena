@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { Typography, Link, Grid, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -7,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff",
     color: "#333",
     padding: theme.spacing(4),
-    position: "relative",
+     position: "relative",
     bottom: 0,
     width: "95%",
     marginTop:"20rem" 
@@ -24,19 +26,20 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 15,
   }, 
   link2: {
-    fontSize: "0.8rem",
-    fontWeight: "normal",
+    fontSize: "0.8rem", 
+    fontWeight: "normal", 
     margin: `0 ${theme.spacing(5)}px`,
     "&:hover": {
       color: theme.palette.secondary.main,
       textDecoration: "none",
     },
-  },
+  }, 
 }));
 
+ 
 function Footer() {
   const classes = useStyles();
-
+ 
   return (
     <Box className={classes.root}>
       <Grid container justifyContent="center">

@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.white,
     boxShadow: theme.shadows[2],
     [theme.breakpoints.down('xs')]: {
-      width: '100%',
+      width: '100%', 
     },
   },
   input: {
@@ -55,10 +55,10 @@ const SearchBar = () => {
     </Paper>
   );
 };
-
-export default SearchBar;
-
-
+//import * as bunsliga from 'mui' 
+export default SearchBar; 
+  
+ 
 
 // import React from 'react';
 

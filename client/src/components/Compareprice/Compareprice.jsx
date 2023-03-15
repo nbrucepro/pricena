@@ -10,12 +10,13 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  Box,
 } from "@material-ui/core";
 // import FormGroup from '@mui/material/FormGroup';
 import axios from "axios";
 import Loader from "../Loader";
 // import './Compareprice.css'
-
+ 
 const useStyles = makeStyles((theme) => ({
   card: {
     padding: theme.spacing(2),
@@ -47,21 +48,21 @@ const useStyles = makeStyles((theme) => ({
     marginLeft:9,
     fontSize:12
   }, 
-  value: {
+  value: {  
     color: "#666666",
     marginRight: 300,
-  },
+  }, 
   header: {
     color: "#4c4c4c",
-    fontWeight: "bold",
+    fontWeight: "bold", 
     marginBottom: 20,
     marginRight: 440,
   },
-  image: {
+  image: {  
     maxWidth: "100%",
     maxHeight: "100%",
   },
-  formgroupa: {
+  formgroupa: { 
     display: "flex",
     marginRight: 150,
     marginTop: 20,
@@ -129,11 +130,11 @@ const ProductDetails = ({ product }) => {
         .then(
           (response) => {
             var response1 = response?.data?.offers;
-            const response2 = response?.data
-            // console.log(response);
+            const response2 = responskey?.data
+            // cle.log(response);
             const ln= response1.length; 
             // console.log(ln)
-            for(let i = 0; i < ln ; i++){
+            for(let i = 0; i < ln ; i++){ 
               console.log(response1[i])
               // console.log(response1[i].title.split(" "))
             }
@@ -165,6 +166,8 @@ const arr1 = [];
           {/* <img src='../../assets/logo.png' alt='hi' className={classes.image} /> */}
         </Grid>
         <Grid item xs={12} sm={6}>
+          <Box>
+
           <Typography variant="h5" component="h2" className={classes.header}>
             Lenovo
           </Typography>
@@ -173,7 +176,9 @@ const arr1 = [];
           </Typography>
           <Typography className={classes.value}>
             Lenovo Ideapad 1 i5-SHD Laptop
-          </Typography>
+          </Typography>       
+          </Box>
+
           <Divider className={classes.breaka} />
           <FormGroup className={classes.formgroupa}>
             <FormControl className={classes.formControla}>
@@ -226,15 +231,19 @@ const arr1 = [];
             </FormControl>
           </FormGroup> 
         </Grid>
+        <Grid item xs={4} sm={4}>
+        <Box>
+          <img
+            src="https://r.kelkoo.com/resize.php?country=ae&merchantId=100512102&categoryId=113501&trackingId=96986255&width=300&height=300&image=https%3A%2F%2Fwww.virginmegastore.ae%2Fmedias%2FDetail-837643-main.jpg%3Fcontext%3DbWFzdGVyfHJvb3R8NTI4MDB8aW1hZ2UvanBlZ3xoMjkvaGJiLzEwMjgzNDI2NzA5NTM0L0RldGFpbF84Mzc2NDNfX21haW4uanBnfDJmMDgwMWUxM2VjZjMyMmJkMWMxYzA3Y2NmMTZjYzE5MjRjNzhkOTNlMzUxMDdmMWFkNjJiNjRjOTI2NGFhYzg&sign=AoXjWmJpLOTsBggNeVUve2pSrUHdEYMjcq6JcLZI98c"
+            alt="hi"
+            className={classes.image}
+            />
+          </Box>
+        </Grid>
       </Grid>
-      {1?(
-        <Loader/>
-      ):(
-        <p>nothing</p> 
-      )}
     </Paper>
-  );
-};
+  ); 
+}; 
 
 export default ProductDetails;
 
