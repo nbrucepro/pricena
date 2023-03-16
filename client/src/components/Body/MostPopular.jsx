@@ -40,13 +40,13 @@ const useStyles = makeStyles((theme) => ({
     cursor:'pointer',
     paddingTop:"10px"
   }
-})); 
-const MostPopular = ({imaga,texta,price}) => {
+}));  
+const MostPopular = ({imaga,texta,price,compshop}) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+    setExpanded(!expanded); 
+  }; 
   const classes = useStyles();
   return (
     <> 
@@ -55,7 +55,7 @@ const MostPopular = ({imaga,texta,price}) => {
         <CardMedia
           component="img"
         //   width={10}
-        //   height={10} okay tothis whynyo 
+        //   height={10} not working at all
           className={classes.Cardmmedia} 
         //   width="0"     
           image={imaga}
@@ -77,12 +77,12 @@ const MostPopular = ({imaga,texta,price}) => {
           {/* <img src="../../assets/fproduct/carrefour.jpg" alt="" srcset="" /> */}
           <Typography style={{cursor:'pointer',marginTop:'-16%',color:"gray",fontSize:"14px"}}  
           > 
-            Compare 2 online shops
+            Compare {compshop} online shops
           </Typography>
         </CardContent>
       </Card>
     </Box>    
-    </>
+    </> 
   );
 };
 

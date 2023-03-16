@@ -76,7 +76,7 @@ const Coupons = ({imaga,texta,nama}) => {
           component="img"
           className={classes.Cardmmedia} 
           image={imaga}
-          alt="Paella dish"  
+          alt="Paella dish"   
         /> */}
         <CardContent>
           <Typography variant="body2" color="text.secondary">          

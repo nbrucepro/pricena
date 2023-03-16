@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:"10px"
   }
 })); 
-const Featured = ({imaga,texta,price}) => {
+const Featured = ({imaga,texta,price,compshop}) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
@@ -77,7 +77,7 @@ const Featured = ({imaga,texta,price}) => {
           {/* <img src="../../assets/fproduct/carrefour.jpg" alt="" srcset="" /> */}
           <Typography style={{cursor:'pointer',marginTop:'-16%',color:"gray",fontSize:"14px"}}  
           > 
-            Compare 2 online shops
+            Compare {compshop} online shops 
           </Typography>
         </CardContent>
       </Card>
