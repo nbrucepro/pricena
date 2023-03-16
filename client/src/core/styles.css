@@ -1,22 +1,25 @@
-.myswipera{
+.myswipera {
   width: 50%;
   margin: auto;
-  margin-left: -10%;
-cursor: pointer;
-margin-top: 1rem;
+  margin-left: -20%;
+  cursor: pointer;
+  margin-top: 1rem;
 }
-.pl5{
+
+.pl5 {
   width: 20%;
   /* height: 10rem; */
   cursor: pointer;
   margin-top: 2rem;
   margin: auto;
+  margin-left: 5%;
+
 }
 
-.myswipera img,.pl5 img{
+.myswipera img,
+.pl5 img {
   width: 100%;
   height: 100%;
   margin-bottom: 2rem;
-  transition: all 0.5s ease ;
+  transition: all 0.5s ease;
 }
-

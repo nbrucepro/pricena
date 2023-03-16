@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Typography, Link, Grid, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -55,7 +53,8 @@ function Footer() {
             </a>
             <a href="#">
               <Typography className={classes.link2}>Mobile Phones</Typography>
-            </a>
+            </a> 
+            {/* what's gonna woatat nithin il wwa */}
             <a href="#">
               <Typography className={classes.link2}>Tablets</Typography>
             </a>

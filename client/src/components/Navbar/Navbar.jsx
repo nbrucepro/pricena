@@ -27,7 +27,7 @@ function Navbar() {
   };
   
   return ( 
-    <AppBar position="static" color="inherit" className={classes.appBar}>
+    <AppBar style={{marginTop:"-0.5%",width:"101%",marginLeft:"-0.5%"}} position="static" color="inherit" className={classes.appBar}>
       <Toolbar>
         <img src='../../assets/logo.png' alt="Logo" style={{ height: '64px', width: '192px' }} />
         <SearchBar />

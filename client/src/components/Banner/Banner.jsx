@@ -9,11 +9,11 @@ SwiperCore.use([Pagination]);
 const Banner = () => {
   const swiperRef = useRef(null);
   return (
-    <Box style={{ display: 'flex' }}> 
+    <Box style={{ display: 'flex',width:"100%",justifyContent:"flex-end" }}> 
     <B1/>    
       <div className='myswipera'>
       <Swiper
-      modules={[Pagination]}
+      modules={[Pagination]} 
       ref={swiperRef}
       pagination={{ clickable: true }} 
     > 
