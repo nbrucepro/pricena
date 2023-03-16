@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
      position: "relative",
     bottom: 0,
     width: "95%",
-    marginTop:"20rem" 
+    marginTop:"5rem" 
   },
   link: {
     fontSize: "1.1rem",
@@ -54,7 +54,7 @@ function Footer() {
             <a href="#">
               <Typography className={classes.link2}>Mobile Phones</Typography>
             </a> 
-            {/* what's gonna woatat nithin il ahawwa */}
+            {/* what's gonna woatat nithin il ahawwa */} 
             <a href="#">
               <Typography className={classes.link2}>Tablets</Typography>
             </a>

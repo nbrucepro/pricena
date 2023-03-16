@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:"10px"
   }
 })); 
-const Featprod = ({imaga,texta}) => {
+const Featured = ({imaga,texta,price}) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
@@ -66,17 +66,24 @@ const Featprod = ({imaga,texta}) => {
           {texta}
           </Typography>
         </CardContent>
-        <CardActions disableSpacing>
-          <img src="../../assets/fproduct/carrefour.jpg" alt="" srcset="" />
-          <Typography style={{cursor:'pointer'}} color="textPrimary"
-          >  
-            carrefour  
+        <CardContent>
+          {/* <img src="../../assets/fproduct/carrefour.jpg" alt="" srcset="" /> */}
+          <Typography style={{cursor:'pointer',marginTop:'-16%',color:"blue"}} 
+          > 
+            AED {price} 
           </Typography>
-        </CardActions>
+        </CardContent>
+        <CardContent>
+          {/* <img src="../../assets/fproduct/carrefour.jpg" alt="" srcset="" /> */}
+          <Typography style={{cursor:'pointer',marginTop:'-16%',color:"gray",fontSize:"14px"}}  
+          > 
+            Compare 2 online shops
+          </Typography>
+        </CardContent>
       </Card>
     </Box>    
     </>
   );
 };
 
-export default Featprod;
+export default Featured;
