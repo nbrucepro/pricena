@@ -194,37 +194,37 @@ const Landing = () => {
           </Typography>
           <Box className={classes.featprodcontelement}>
             <Featured
-              imaga="../../assets/featured/img1.png"
+              imaga="../../assets/featuredimg/img1.png"
               texta={"Nivea Men vitality Fresh Shower Gel (250 Ml) BBD7008"}
               price={"13"} 
               compshop={"5"}
             />
             <Featured
-              imaga="../../assets/featured/img2.png" 
+              imaga="../../assets/featuredimg/img2.png" 
               texta={"Nivea Natural Fairness Face Wash (100 Ml)"}
               price={"14"}
               compshop={"4"}
             />
             <Featured
-              imaga="../../assets/featured/img3.png"
+              imaga="../../assets/featuredimg/img3.png"
               texta={"Sunsilk Shampoo Black Shine (400Ml)"}
               price={"14"}
               compshop={"3"}
             />
             <Featured
-              imaga="../../assets/featured/img4.png"
+              imaga="../../assets/featuredimg/img4.png"
               texta={"Samsung Galaxy S23 Ultra"}
               price={"3739"}
               compshop={"13"}
             />
             <Featured
-              imaga="../../assets/featured/img5.png"
+              imaga="../../assets/featuredimg/img5.png"
               texta={"Anker Zolo Liberty Plus Earphones"}
               price={"225"}
               compshop={"3"}
             />
             <Featured
-              imaga="../../assets/featured/img6.png"
+              imaga="../../assets/featuredimg/img6.png"
               texta={"Hugo Boss Boss Femme for Women"}
               price={"129"}
               compshop={"4"}
