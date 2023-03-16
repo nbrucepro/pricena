@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#fff",
     color: "#333",
-    padding: theme.spacing(4),
+    padding: theme.spacing(4), 
      position: "relative",
     bottom: 0,
     width: "95%",
