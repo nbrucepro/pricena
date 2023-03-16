@@ -45,7 +45,7 @@ function Footer() {
           <Box
             sx={{ display: "flex", flexDirection: "column" }}
             color="inherit"
-            href="#"
+            href="#" 
             className={classes.link}
           >
             <a href="#">
@@ -54,7 +54,7 @@ function Footer() {
             <a href="#">
               <Typography className={classes.link2}>Mobile Phones</Typography>
             </a> 
-            {/* what's gonna woatat nithin il wwa */}
+            {/* what's gonna woatat nithin il ahawwa */}
             <a href="#">
               <Typography className={classes.link2}>Tablets</Typography>
             </a>

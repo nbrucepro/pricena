@@ -4,7 +4,9 @@ import Navbar from "../Navbar/Navbar";
 import { makeStyles } from "@material-ui/core/styles";
 import Footer from "../Footer/Footer";
 import Banner from "../Banner/Banner";
-import Featprod from "../Banner/Featprod";
+import Featprod from "../Body/Featprod";
+import Coupons from "../Body/Coupons";
+import RecommendePhones from "../Body/RecommendePhones";
 
 const useStyles = makeStyles((theme) => ({
   boxcontainer: {
@@ -36,6 +38,20 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid #dadae8",    
     // border: "3px solid #f6f6f8",    
     // #9a9a9a
+    height:'0.1%',
+    margin:'auto',     
+  },
+  rfttext: {
+    width:'25%',
+    color: "black",
+    fontWeight:'700',
+    display: "flex",
+    marginLeft: "1%",
+  },
+  rftline: {
+    width: "72%",
+    marginLeft:"-1%",   
+    border: "1px solid #dadae8",    
     height:'0.1%',
     margin:'auto',     
   },
@@ -84,36 +100,79 @@ const Landing = () => {
         
         <Box className={classes.featprodcont}>
           <Typography style={{display:'flex',paddingTop:'1%'}}>
-            <span className={classes.fttext}>Featured Products</span>            
+            <span className={classes.fttext}>Coupons </span>            
+            {/* see all */}
             <span className={classes.ftline}></span>
           </Typography>
           <Box className={classes.featprodcontelement}>
-            <Featprod
-              imaga="../../assets/fproduct/samsungwmachine.png"
-              texta="Samsung Front Load Washing Machine"
+            <Coupons
+              imaga="../../assets/coupon/amazon.png"
+              texta={`10% off for Citi Mastercard "CB10MA"`}
+              nama={'Amazon'}
             />
-            <Featprod
-              imaga="../../assets/fproduct/samsunglaxys23.png"
-              texta={"Samsung Galaxy S23 Ultra Dual SIM 12GB"}
+            <Coupons
+              imaga="../../assets/fproduct/carrefour.jpg"
+              texta={"10% off AED coupon from Carrefour"}
+              nama={'Carrefour'}
             />
-            <Featprod
-              imaga="../../assets/fproduct/apple iphone 14 pro.png"
-              texta={"Apple iPhone 14 Pro 128GB 5G Silver"}
-            />
-            <Featprod
-              imaga="../../assets/fproduct/iPhone13.png"
-              texta={"iPhone 13 4GB RAM 256GB 5G Blue"}
-            />
-            <Featprod
-              imaga="../../assets/fproduct/apple iphone 14 pro max.png"
-              texta={"Apple iPhone 14 Pro Max 128GB 5G Space"}
-            />
-            <Featprod
-              imaga="../../assets/fproduct/samsunglaxys238gb.png"
-              texta={"Samsun Galaxy S23 Dual SIM 8GB RAM"}
+            <Coupons
+              imaga="../../assets/coupon/gap.png"
+              texta={"10% off AED coupon from Gap"}
+              nama={'Gap'}
+              /> 
+            <Coupons
+              imaga="../../assets/coupon/iherb.png"
+              texta={"10% off AED coupon from iHerb"}
+              nama={'iHerb'}
+              />
+            <Coupons
+              imaga="../../assets/coupon/asteronline.png"
+              texta={"10% off AED coupon from Aster Online"}
+              nama={'Aster Online'}
+              />
+            <Coupons 
+              imaga="../../assets/coupon/huawei.png"
+              texta={"10% off AED coupon from Huawei"}
+              nama={'Huawei'}
             /> 
           </Box>
         </Box>
+
+        {/* RecommendePhones.jsx */}
+        <Box className={classes.featprodcont}>
+          <Typography style={{display:'flex',paddingTop:'1%'}}>
+            <span className={classes.rfttext}>Recommended for you in Mobile Phones</span>            
+            <span className={classes.rftline}></span>
+          </Typography>
+          <Box className={classes.featprodcontelement}>
+            <RecommendePhones
+              imaga="../../assets/fproduct/samsunglaxys23.png"
+              texta={"Samsung Galaxy S23 Ultra Dual SIM 12GB"}
+            />
+            <RecommendePhones
+              imaga="../../assets/recommended/samsung s22.png" 
+              texta={"Samsung Galaxy S23 Ultra Dual SIM 12GB"}
+            />
+            <RecommendePhones
+              imaga="../../assets/fproduct/apple iphone 14 pro.png"
+              texta={"Apple iPhone 14 Pro 128GB 5G Silver"}
+            />
+            <RecommendePhones
+              imaga="../../assets/fproduct/iPhone13.png"
+              texta={"iPhone 13 4GB RAM 256GB 5G Blue"}
+            />
+            <RecommendePhones
+              imaga="../../assets/fproduct/apple iphone 14 pro max.png"
+              texta={"Apple iPhone 14 Pro Max 128GB 5G Space"}
+            />
+            <RecommendePhones
+              imaga="../../assets/fproduct/samsunglaxys238gb.png"
+              texta={"Samsun Galaxy S23 Dual SIM 8GB RAM"}
+            />
+          </Box>
+        </Box>
+        {/* RecommendePhones.jsx */}
+        
         <Footer />
       </Box>
     </>

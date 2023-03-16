@@ -14,13 +14,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 function Navbar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
-  };
+  }; 
   
   const handleMenuClose = () => {
     setAnchorEl(null);

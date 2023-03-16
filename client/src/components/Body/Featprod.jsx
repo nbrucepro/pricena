@@ -69,8 +69,8 @@ const Featprod = ({imaga,texta}) => {
         <CardActions disableSpacing>
           <img src="../../assets/fproduct/carrefour.jpg" alt="" srcset="" />
           <Typography style={{cursor:'pointer'}} color="textPrimary"
-          >
-            carrefour
+          >  
+            carrefour 
           </Typography>
         </CardActions>
       </Card>
